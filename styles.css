@@ -1,10 +1,90 @@
+/* #8AB9B5, #C8C2AE */
+
+body {
+    background-image: linear-gradient(116deg, #0EB1D250, #34E4EA50), url(/Images/2.jpg);
+    background-size: cover;
+}
+
 header {
     text-align: center;
+    color: white;
+    text-shadow: 0 0 5px black;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 50%;
     margin: 0 auto;
+    background-color: #2B414195;
+    padding: 40px;
+    color: white;
+}
+
+fieldset {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid #8AB9B5;
+  }
+
+.field-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 14px;
+  }
+  
+input,
+textarea,
+select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2em;
+  }
+
+input[type="radio"] {
+    width: 15px;
+} 
+
+input[type="checkbox"] {
+    width: 15px;
+}
+
+.inline{
+    display: inline;
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle; 
+  }
+
+#text-comment {
+    font-size: 24px;
+    text-align: center;
+}
+
+input[type="submit"] {
+    width: 100px;
+    padding: 10px 30px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 5px;
+    background-color: #083677;
+    box-shadow: 0 0 5px black;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+input[type="submit"]:hover {
+    background-color: #225ba9;
 }

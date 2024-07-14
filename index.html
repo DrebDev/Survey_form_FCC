@@ -8,42 +8,49 @@
 </head>
 <body>
     <header>
-        <h1 id="title">FreeCodeCamp Surver Form</h1>
-        <p id="description">Thank you for taking the time to help us improve the platform</p>
+        <h1 id="title">Students Surver Form</h1>
+        <p id="description">Thank you for taking the time to help us improve our study methods</p>
     </header>
     <main>
-        <form id="survey-form">
-            <label>Name</label>
-            <input type="text" id="name" placeholder="Enter your name" required>
-            <label>Email</label>
-            <input type="email" id="email" placeholder="Enter your email" required>
-            <label>Age (optional)</label>
-            <input id="number" placeholder="Age" required>
+        <form id="survey-form" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name" id="name-label">Name <input type="text" id="name" placeholder="Enter your name" name="name" required></label>
+                <label for="email" id="email-label">Email <input type="email" id="email" placeholder="Enter your email" required></label>
+                <label for="number" id="number-label">Age (optional) <input id="number" type="number" placeholder="Age" min="18" max="45" required></label>
+            </fieldset>
 
-            <label>How many hours do you study a day?</label>
-            <select id="dropdown">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4 or more</option>
-            </select>
+            <fieldset>
+                <legend>Study Habbits</legend>
+                <label for="dropdown">How many hours do you study a day?
+                    <select id="dropdown" name="dropdown">
+                        <option value="">(select one)</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4 or more</option>
+                    </select>
+                </label>
+            </fieldset>
 
-            <label>Which is your favorite study enviroment?</label>
-            <input type="radio" name="radio" value="1">Classroom
-            <input type="radio" name="radio" value="2">Library
-            <input type="radio" name="radio" value="3">Home
-            <input type="radio" name="radio" value="4">Other
+            <fieldset class="field-flex">
+                <legend>Enviroments</legend>
+                <label for="classroom"> Classroom <input class="inline" type="radio" value="enviroment" id="classroom" name="enviroment" checked></label>
+                <label for="library">Library <input class="inline"  value="enviroment" type="radio" id="library" name="enviroment"></label>
+                <label for="home">Home  <input  class="inline" value="enviroment"  type="radio" id="home" name="enviroment"></label>
+                <label for="other">Other <input class="inline"  type="radio" value="enviroment" id="other" name="enviroment"></label>
+            </fieldset>
 
-            <label>What is your favorite study technique?</label>
-            <input type="checkbox">Pomodoro
-            <input type="checkbox">Flashcards
-            <input type="checkbox">Mindmap
-            <input type="checkbox">Other
-
-            <label>Any ideas for improve our study method?</label>
-            <textarea id="textarea" placeholder="Enter your ideas"></textarea>
-
-            <input type="submit" value="Submit">
+            <fieldset>
+                <legend>What is your favorite study technique? (select all that apply)</legend>
+                <label for="reading"><input class="inline"  type="checkbox" id="reading"  value="technique" name="1" checked> Reading </label>
+                <label for="reading"><input class="inline"  type="checkbox" value="technique"id="reading" name=""> Pomodoro</label>
+                <label for="reading"><input class="inline"  type="checkbox" value="technique"id="reading" name="3"> Repetition</label>
+                <label for="reading"><input class="inline"  type="checkbox" value="technique" id="reading" name="4"> Other</label>
+            </fieldset>
+            
+            <label for="comments" id="text-comment">Comments <textarea id="comments" name="comments" placeholder="Write your ideas.." cols="4" rows="10"></textarea></label>
+            <input id="submit" type="submit" value="Submit"/>
         </form>
     </main>
 </body>
