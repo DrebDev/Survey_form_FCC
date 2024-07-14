@@ -13,6 +13,37 @@
     </header>
     <main>
         <form id="survey-form">
+            <label>Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <label>Age (optional)</label>
+            <input id="number" placeholder="Age" required>
+
+            <label>How many hours do you study a day?</label>
+            <select id="dropdown">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4 or more</option>
+            </select>
+
+            <label>Which is your favorite study enviroment?</label>
+            <input type="radio" name="radio" value="1">Classroom
+            <input type="radio" name="radio" value="2">Library
+            <input type="radio" name="radio" value="3">Home
+            <input type="radio" name="radio" value="4">Other
+
+            <label>What is your favorite study technique?</label>
+            <input type="checkbox">Pomodoro
+            <input type="checkbox">Flashcards
+            <input type="checkbox">Mindmap
+            <input type="checkbox">Other
+
+            <label>Any ideas for improve our study method?</label>
+            <textarea id="textarea" placeholder="Enter your ideas"></textarea>
+
+            <input type="submit" value="Submit">
         </form>
     </main>
 </body>
